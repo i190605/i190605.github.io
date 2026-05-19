@@ -85,10 +85,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);padding:
 /* ABOUT */
 .about-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem;margin-bottom:1.5rem}
 .about-head .section-title{margin-bottom:0}
-.about-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:start}
+.about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:1.5rem;align-items:start}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
 @media(max-width:760px){.about-head{flex-direction:column;align-items:flex-start}.about-grid{gap:1.25rem}}
 .about-text p{color:var(--muted);line-height:1.8;font-size:clamp(.93rem,1.5vw,1.05rem);margin-bottom:1.25rem}
 .about-text p strong{color:var(--white);font-weight:500}
+.about-photo{background:linear-gradient(160deg,rgba(16,27,46,.98),var(--card));border:1px solid var(--border);border-radius:18px;padding:.8rem;box-shadow:var(--shadow-soft);position:sticky;top:92px}
+.about-photo img{display:block;width:100%;height:auto;border-radius:12px;object-fit:cover}
+@media(max-width:900px){.about-photo{position:static;max-width:420px}}
 
 /* RESUME */
 #resume{background:linear-gradient(to bottom,transparent,rgba(15,22,40,.45),transparent)}
@@ -246,6 +250,9 @@ footer{text-align:center;padding:1.75rem 1rem;color:var(--muted);font-size:.77re
         <p>I thrive at the intersection of elegant front-end design and robust back-end engineering, shipping end-to-end solutions that are performant and maintainable.</p>
         <p><strong>Education:</strong> Bachelor of Science — Computer Science<br>National University of Computer and Emerging Sciences (FAST-NUCES), Islamabad, Pakistan · Graduated 2023</p>
         <p><strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms, Software Engineering, Database Systems, Web Technologies, Machine Learning, Computer Networks</p>
+      </div>
+      <div class="about-photo fade-in" style="transition-delay:.08s">
+        <img src="hamza.png" alt="Muhammad Hamza Tariq portrait" loading="lazy"/>
       </div>
     </div>
   </div>
